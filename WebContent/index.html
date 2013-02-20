@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>Uni-TAS Test page</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- includes -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt2MjDwYVxVsVo5m-D8ov7LNzJsO-L28Y&sensor=false"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCt2MjDwYVxVsVo5m-D8ov7LNzJsO-L28Y&libraries=places&sensor=false"></script>
+		<!-- my code -->
+		<script type = "text/javascript" src="unitas.js"></script>
+		<script type = "text/javascript" src="GUI.js"></script>
+		<script type = "text/javascript" src="DatabaseService.js"></script>
+		
+		
+	</head>
+	
+	<body>
+		<div id ="backgroundDiv">
+			<div id ="innerDiv">
+				<div id="spacer"></div>
+				<h1 id="logo">Uni-TAS</h1>
+		<div id="grid">	
+			<div id="header">
+					
+					<div id = "search_bar_options">
+						<!-- Search Bar -->
+						<div id = "search_container">
+							<div class = "tab_container">
+								<div id="tab1" class = "tab_content">
+									<input id="nearbySearchBar"class="searchBar" placeholder="Search for Nearby Places">
+									<div id="search_button_div">
+										<input class="searchButton" id = "nearbySearchButton" type="image" src="images/search-logo.png" alt="Submit"><br>
+									</div>
+								</div>
+								<div id = "tab2" class = "tab_content">
+									<input id="locationSearchBar" class = "searchBar" placeholder="Search by Location">
+									<div id="search_button_div">
+										<input class="searchButton" id="locationSearchButton" type="image" src="images/search-logo.png" alt="Submit"><br>
+									</div>
+								</div>
+							</div>
+							<ul class ="tabs">
+								<li class="active" id ="nearby" rel = "tab1">Nearby</li>
+								<li id="location" rel = "tab2">Location</li>
+							</ul>
+						</div>
+						<!--  -->
+						
+						<!-- Search Filters -->
+					
+						<div id = "filter_div">
+							<form id="filter_form">
+								<table id="filter_table" border ="0">
+									<tr>
+										
+								<td><input type="checkbox" name="filter" value="Restaurant" style="font-weight: bold">Restaurant</td>
+								<td><input type="checkbox" name="filter" value="Bar"> Bar</td>
+								<td><input type="checkbox" name="filter" value="Park"> Park</td>
+								<td><input type="checkbox" name="filter" value="Health"> Health Center</td>
+									</tr>
+									<tr>
+							
+								<td><input type="checkbox" name="filter" value="Religious"> Religious Center</td>
+								<td><input type="checkbox" name="filter" value="Shelter"> Aid Shelter</td>
+								<td><input type="checkbox" name="filter" value="Government"> Police/Fire Dept.</td>
+									</tr>
+								</table>
+							</form>							
+							
+						</div>
+						
+						<div id = "select_div">
+							<button id ="view_select_button">View</button>
+							<select name ="viewSelect" id="view_select">
+								<option value="locations">Locations</option>
+								<option value="events">Events</option>
+								<option value="agenda">Agenda</option>
+							</select>
+							
+						</div>
+						
+						
+						<!-- -->
+					</div>
+
+			</div>			
+			<div id="side">
+				<ul id="resultlist">
+
+				</ul>
+			</div>
+			<div id="map_canvas">
+				map!
+			</div>		
+			<div id="footer">
+				This is for contact information, disclaimers, "about" links, etc
+			</div>
+		</div>
+		</div>
+		</div>
+	</body>
+	
+</html>
